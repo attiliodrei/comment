@@ -34,3 +34,4 @@ file LICENSE.md in example subfolder.
 [release-img]: https://img.shields.io/github/release/vlc-qt/examples.svg
 [travis-img]: https://travis-ci.org/vlc-qt/examples.svg?branch=master
 [appveyor-img]: https://ci.appveyor.com/api/projects/status/p8x4yi0as9bc1ts1?svg=true
+# comment
