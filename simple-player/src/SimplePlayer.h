@@ -33,6 +33,7 @@ private slots:
     void StopTimer();
     void Play();
     void onClicked();
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::SimplePlayer *ui;
     VlcInstance *_instance;

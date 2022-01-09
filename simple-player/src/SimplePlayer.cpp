@@ -11,7 +11,7 @@
 #include <VLCQtCore/MediaPlayer.h>
 #include <stdio.h>
 #include <iostream>
-
+#include <QCloseEvent>
 #include "EqualizerDialog.h"
 
 #include "SimplePlayer.h"
@@ -66,6 +66,7 @@ SimplePlayer::SimplePlayer(QWidget *parent)
 //  connect(ui->stop, &QPushButton::clicked, _player, &VlcMediaPlayer::stop);
     connect(timer, SIGNAL(timeout()), this, SLOT(slotTimerAlarm()));
     connect(ui->equalizer, &QPushButton::clicked, _equalizerDialog, &EqualizerDialog::show);	
+	connect(qApp,SIGNAL(aboutToQuit()),this,SLOT(quitMyApp()));
 
    // timer->start(1000); 
 }
@@ -168,6 +169,13 @@ void SimplePlayer::onClicked()
    timer->start();
    	ui->start->setStyleSheet("QPushButton { background-color: green; }\n");
  }
+}
+void SimplePlayer::closeEvent (QCloseEvent *event)
+{
+        process->kill();
+        timer->stop();
+        event->accept();
+		QWidget::closeEvent(event);
 }
 
 

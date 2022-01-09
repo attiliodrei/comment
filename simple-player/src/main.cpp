@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
     SimplePlayer mainWindow;
 	
-QString findmic=app.applicationDirPath() + "/mic.bat";
+QString findmic=app.applicationDirPath() + "/mic.cmd";
 QProcess mprocess;
 QStringList params={">", "%temp%\mic1.txt"}; 
 mprocess.start(findmic);
