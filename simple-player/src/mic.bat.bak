@@ -1,0 +1,6 @@
+@echo off
+pushd "%~dp0"
+setlocal enableextensions
+ffmpeg.exe  -hide_banner -loglevel info -f dshow  -list_devices true -i ""  2>&1 | find "Mic" > %temp%\mic.txt
+set /p mic=<%temp%\mic.txt
+echo|set /p=%mic:~28%

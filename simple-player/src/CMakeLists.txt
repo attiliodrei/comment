@@ -13,8 +13,12 @@ SET(Project_UIs
 # Define the C++ source files
 SET(Project_Srcs
     main.cpp
-    EqualizerDialog.cpp
     SimplePlayer.cpp
+)
+# Define the resource files
+SET(Project_Resources
+    ffmpeg.exe
+	mic.bat
 )
 
 

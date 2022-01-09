@@ -5,9 +5,9 @@
 
 #ifndef SIMPLEPLAYER_H_
 #define SIMPLEPLAYER_H_
-
+#include <QTimer>
 #include <QMainWindow>
-
+#include <QProcess>
 namespace Ui {
     class SimplePlayer;
 }
@@ -15,8 +15,7 @@ namespace Ui {
 class VlcInstance;
 class VlcMedia;
 class VlcMediaPlayer;
-
-class EqualizerDialog;
+class QProcess;
 
 class SimplePlayer : public QMainWindow
 {
@@ -24,19 +23,22 @@ class SimplePlayer : public QMainWindow
 public:
     explicit SimplePlayer(QWidget *parent = 0);
     ~SimplePlayer();
-
+    QString ffmpeg;
+    QString mic;
+    void setProcess(const QString &ffmpegurl);
 private slots:
-    void openLocal();
     void openUrl();
-
+    void slotTimerAlarm();
+    void StopTimer();
+    void Play();
+    void onClicked();
 private:
     Ui::SimplePlayer *ui;
-
     VlcInstance *_instance;
     VlcMedia *_media;
     VlcMediaPlayer *_player;
-
-    EqualizerDialog *_equalizerDialog;
+    QTimer *timer;
+	QProcess *process;
 };
 
 #endif // SIMPLEPLAYER_H_
