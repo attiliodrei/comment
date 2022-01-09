@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="windows-1252"?>
-<Settings>
+<>
+  <InputFile>C:\Users\Administrator\Desktop\simple-player\simple-player.exe</InputFile>
+  <OutputFile>C:\Users\Administrator\Desktop\comment.exe</OutputFile>
   <Files>
+    <Enabled>True</Enabled>
+    <DeleteExtractedOnExit>False</DeleteExtractedOnExit>
+    <CompressFiles>True</CompressFiles>
     <Files>
       <File>
         <Type>3</Type>
-        <Name>%Temp FOLDER%</Name>
+        <Name>%DEFAULT FOLDER%</Name>
         <Action>0</Action>
         <OverwriteDateTime>False</OverwriteDateTime>
         <OverwriteAttributes>False</OverwriteAttributes>
@@ -12,20 +17,8 @@
         <Files>
           <File>
             <Type>2</Type>
-            <Name>d3dcompiler_47.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\d3dcompiler_47.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>ffmpeg.exe</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\ffmpeg.exe</File>
+            <Name>VLCQtWidgets.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\VLCQtWidgets.dll</File>
             <ActiveX>False</ActiveX>
             <ActiveXInstall>False</ActiveXInstall>
             <Action>0</Action>
@@ -173,90 +166,6 @@
                 <HideFromDialogs>0</HideFromDialogs>
               </File>
             </Files>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>libEGL.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\libEGL.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>libgcc_s_seh-1.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\libgcc_s_seh-1.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>libGLESV2.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\libGLESV2.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>libvlc.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\libvlc.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>libvlccore.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\libvlccore.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>mic.cmd</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\mic.cmd</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>opengl32sw.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\opengl32sw.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
           </File>
           <File>
             <Type>3</Type>
@@ -4059,66 +3968,6 @@
             </Files>
           </File>
           <File>
-            <Type>2</Type>
-            <Name>Qt5Core.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Core.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>Qt5Gui.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Gui.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>Qt5Svg.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Svg.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>Qt5Widgets.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Widgets.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>simple-player.exe</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\simple-player.exe</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
             <Type>3</Type>
             <Name>styles</Name>
             <Action>0</Action>
@@ -4404,11 +4253,179 @@
           </File>
           <File>
             <Type>2</Type>
+            <Name>d3dcompiler_47.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\d3dcompiler_47.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>ffmpeg.exe</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\ffmpeg.exe</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>2</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>libEGL.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\libEGL.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>libgcc_s_seh-1.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\libgcc_s_seh-1.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>libGLESV2.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\libGLESV2.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>libvlc.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\libvlc.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>libvlccore.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\libvlccore.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>mic.cmd</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\mic.cmd</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>2</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>opengl32sw.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\opengl32sw.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>Qt5Core.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Core.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>Qt5Gui.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Gui.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>Qt5Svg.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Svg.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>Qt5Widgets.dll</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\Qt5Widgets.dll</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>simple-player.exe</Name>
+            <File>C:\Users\Administrator\Desktop\simple-player\simple-player.exe</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
             <Name>vc_redist.x86.exe</Name>
             <File>C:\Users\Administrator\Desktop\simple-player\vc_redist.x86.exe</File>
             <ActiveX>False</ActiveX>
             <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
+            <Action>2</Action>
             <OverwriteDateTime>False</OverwriteDateTime>
             <OverwriteAttributes>False</OverwriteAttributes>
             <PassCommandLine>False</PassCommandLine>
@@ -4426,23 +4443,21 @@
             <PassCommandLine>False</PassCommandLine>
             <HideFromDialogs>0</HideFromDialogs>
           </File>
-          <File>
-            <Type>2</Type>
-            <Name>VLCQtWidgets.dll</Name>
-            <File>C:\Users\Administrator\Desktop\simple-player\VLCQtWidgets.dll</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
         </Files>
+      </File>
+      <File>
+        <Type>3</Type>
+        <Name>%Temp FOLDER%</Name>
+        <Action>0</Action>
+        <OverwriteDateTime>False</OverwriteDateTime>
+        <OverwriteAttributes>False</OverwriteAttributes>
+        <HideFromDialogs>0</HideFromDialogs>
+        <Files/>
       </File>
     </Files>
   </Files>
   <Registries>
+    <Enabled>False</Enabled>
     <Registries>
       <Registry>
         <Type>1</Type>
@@ -4486,4 +4501,20 @@
       </Registry>
     </Registries>
   </Registries>
-</Settings>
+  <Packaging>
+    <Enabled>False</Enabled>
+  </Packaging>
+  <Options>
+    <ShareVirtualSystem>False</ShareVirtualSystem>
+    <MapExecutableWithTemporaryFile>False</MapExecutableWithTemporaryFile>
+    <AllowRunningOfVirtualExeFiles>True</AllowRunningOfVirtualExeFiles>
+  </Options>
+  <Storage>
+    <Files>
+      <Enabled>False</Enabled>
+      <Folder>%DEFAULT FOLDER%\</Folder>
+      <RandomFileNames>False</RandomFileNames>
+      <EncryptContent>False</EncryptContent>
+    </Files>
+  </Storage>
+</>
