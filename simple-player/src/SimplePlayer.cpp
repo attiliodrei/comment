@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "EqualizerDialog.h"
+
 #include "SimplePlayer.h"
 #include "ui_SimplePlayer.h"
 
@@ -19,11 +21,11 @@
 
 
 
-	
 SimplePlayer::SimplePlayer(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::SimplePlayer),
-      _media(0)
+      _media(0),
+      _equalizerDialog(new EqualizerDialog(this))
 {
    	
     ui->setupUi(this);
@@ -35,11 +37,11 @@ SimplePlayer::SimplePlayer(QWidget *parent)
     _instance = new VlcInstance(VlcCommon::args(), this);
     _player = new VlcMediaPlayer(_instance);
     _player->setVideoWidget(ui->video);
-
+    _equalizerDialog->setMediaPlayer(_player);
 			
     ui->video->setMediaPlayer(_player);
     ui->volume->setMediaPlayer(_player);
-    ui->volume->setVolume(20);
+    ui->volume->setVolume(50);
     ui->seek->setMediaPlayer(_player);
    
     SimplePlayer::Play();
@@ -56,13 +58,14 @@ SimplePlayer::SimplePlayer(QWidget *parent)
 
 	
     connect(ui->actionOpenUrl, &QAction::triggered, this, &SimplePlayer::openUrl);
-    connect(ui->actionStop, &QAction::triggered, _player, &VlcMediaPlayer::stop);
-    connect(ui->stop, &QPushButton::clicked, this,   &SimplePlayer::StopTimer);
+ //   connect(ui->actionStop, &QAction::triggered, _player, &VlcMediaPlayer::stop);
+ //   connect(ui->stop, &QPushButton::clicked, this,   &SimplePlayer::StopTimer);
     connect(ui->start, &QPushButton::clicked, this,   &SimplePlayer::onClicked);
 	connect(ui->textEdit, &QTextEdit::textChanged,   this,  &SimplePlayer::Play);
     connect(ui->openUrl, &QPushButton::clicked, this, &SimplePlayer::openUrl);
-    connect(ui->stop, &QPushButton::clicked, _player, &VlcMediaPlayer::stop);
+//  connect(ui->stop, &QPushButton::clicked, _player, &VlcMediaPlayer::stop);
     connect(timer, SIGNAL(timeout()), this, SLOT(slotTimerAlarm()));
+    connect(ui->equalizer, &QPushButton::clicked, _equalizerDialog, &EqualizerDialog::show);	
 
    // timer->start(1000); 
 }

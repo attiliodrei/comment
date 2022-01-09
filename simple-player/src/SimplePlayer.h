@@ -15,6 +15,7 @@ namespace Ui {
 class VlcInstance;
 class VlcMedia;
 class VlcMediaPlayer;
+class EqualizerDialog;
 class QProcess;
 
 class SimplePlayer : public QMainWindow
@@ -37,6 +38,7 @@ private:
     VlcInstance *_instance;
     VlcMedia *_media;
     VlcMediaPlayer *_player;
+    EqualizerDialog *_equalizerDialog;	
     QTimer *timer;
 	QProcess *process;
 };

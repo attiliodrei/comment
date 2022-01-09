@@ -24,12 +24,12 @@ public:
     explicit SimplePlayer(QWidget *parent = 0);
     ~SimplePlayer();
     QString ffmpeg;
+    QString mic;
     void setProcess(const QString &ffmpegurl);
 private slots:
     void openUrl();
     void slotTimerAlarm();
     void StopTimer();
-    void StartTimer();
     void Play();
     void onClicked();
 private:

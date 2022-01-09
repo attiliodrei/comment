@@ -10,15 +10,13 @@ CONFIG 	   += c++11
 QT         += widgets
 
 SOURCES    += main.cpp \
-   SimplePlayer.cpp \
-    EqualizerDialog.cpp
-	
-HEADERS    += SimplePlayer.h \
-    EqualizerDialog.h
+    SimplePlayer.cpp
 
 
-HEADERS    += SimplePlayer.h \
-    EqualizerDialog.h
+HEADERS    += SimplePlayer.h
+
+
+FORMS      += SimplePlayer.ui
 
 
 LIBS       += -lVLCQtCore -lVLCQtWidgets
