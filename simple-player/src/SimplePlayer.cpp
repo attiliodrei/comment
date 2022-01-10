@@ -135,13 +135,20 @@ void SimplePlayer::Play()
 if (channel > "0" ) {
 	QString currenturl= "rtmp://aws-reflector.tngrm.io:1935/comment-" + channel +"/live.pubproxy";
     _media = new VlcMedia(currenturl ,  _instance);
-	const QStringList mediaopt  ={":network-caching=0,:live-caching=0,:rtsp-frame-buffer-size=300,:rtsp=tcp,:rtsp-caching=50"} ;
-    _media->setOption(":network-caching=0"  );
-    _media->setOption(":live-caching=0"  );
-    _media->setOption(":rtsp-frame-buffer-size=300"  );
-    _media->setOption(":rtsp=tcp"  );
-    _media->setOption(":rtsp-caching=50"  );
-			
+	//const QStringList mediaopt  ={":network-caching=0",":live-caching=0",":rtsp-frame-buffer-size=300",":rtsp=tcp",":rtsp-caching=50"} ;
+	QString mediaopt=":network-caching=0 :sout-mux-caching:0 :live-caching=0 :rtmp-caching=0 :tcp-caching=0 :rtsp-frame-buffer-size=300 :rtsp=tcp :rtsp-caching=50" ;
+	//QStringList<QString> list;
+	//list << "--network-caching=0" << ":live-caching=0" << ":rtsp-frame-buffer-size=300" << ":rtsp-frame-buffer-size=300" <<":rtsp=tcp" <<":rtsp-caching=50" ;
+    // _media->setOption(":network-caching=0"  );
+    // _media->setOption(":live-caching=0"  );
+    // _media->setOption(":rtsp-frame-buffer-size=300"  );
+    // _media->setOption(":rtsp=tcp"  );
+	// _media->setOption(":rtmp-caching=50"  );
+	// _media->setOption(":rtsp=tcp"  );
+	// _media->setOption(":rtsp-caching=50"  );
+    // _media->setOption(":tcp-caching=50"  );
+	// _media->setOption(":sout-mux-caching=50"  );
+	_media->setOption(mediaopt);
     _player->open(_media);
 
      }

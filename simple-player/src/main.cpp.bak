@@ -44,7 +44,7 @@ QString findmic=app.applicationDirPath() + "/mic.bat";
 QProcess mprocess;
 QStringList params={">", "%temp%\mic1.txt"}; 
 mprocess.start(findmic);
-mprocess.waitForFinished(); // will wait forever until finished
+mprocess.waitForFinished();
 //QFile file("/home/hamad/lesson11.txt");
 //if(!file.open(QIODevice::ReadOnly)) {
 //QStandardPaths::writableLocation(QStandardPaths::TempLocation) to get the temporary directory path as a QString. You'll need to #include <QStandardPaths> 
@@ -57,7 +57,7 @@ mainWindow.mic=micp.simplified();
 
 	
 	 QStringList args = app.arguments();
-    if (args.count() > 2) 
+    if (args.count() > 1) 
     {
  
        	Console();
