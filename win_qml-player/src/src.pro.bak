@@ -1,0 +1,8 @@
+QT = core qml
+
+SOURCES += main.cpp 
+HEADERS += process.h
+RESOURCES += video.qrc
+
+target.path = $$[QT_INSTALL_EXAMPLES]/qml/attilio
+INSTALLS += target

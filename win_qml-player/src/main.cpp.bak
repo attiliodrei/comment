@@ -1,0 +1,66 @@
+#include <QtCore/QCoreApplication>
+#include <QtGui/QGuiApplication>
+#include <QtQuick/QQuickView>
+#include <QQmlApplicationEngine>
+#include <QFileInfo>
+#include "process.h"
+
+#include <QtQml>
+
+#include <VLCQtCore/Common.h>
+#include <VLCQtQml/QmlVideoPlayer.h>
+#include <QDebug>
+
+#include <windows.h>
+#include <stdio.h>
+#include <iostream>
+void Console()
+{
+    AllocConsole();
+    FILE *pFileCon = NULL;
+    pFileCon = freopen("CONOUT$", "w", stdout);
+
+    COORD coordInfo;
+    coordInfo.X = 130;
+    coordInfo.Y = 9000;
+
+    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coordInfo);
+    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_QUICK_EDIT_MODE| ENABLE_EXTENDED_FLAGS);
+}
+
+
+int main(int argc, char** argv)
+{
+    QGuiApplication app(argc, argv);
+        // VlcQmlVideoPlayer::registerPlugin();
+         //VlcCommon::setPluginPath(app.applicationDirPath() + "/plugins");
+
+    QQmlApplicationEngine engine;
+    QString  ffmpegpath=app.applicationDirPath() + "/ffmpeg.exe";
+        if(QFileInfo::exists(ffmpegpath))
+         {
+                  
+         }
+         else {
+            ffmpegpath=app.applicationDirPath() + "/Contents/MacOS/ffmpeg";
+          
+         }
+
+
+
+       QUrl appPath(ffmpegpath );
+ //   QUrl appPath(QString("%1").arg(app.applicationDirPath() +   "/ffmpeg" ));
+        
+
+       qmlRegisterType<Process>("Process", 1, 0, "Process");
+
+    //QUrl appPath(QString("/Applications/qml-player.app/Contents/MacOS/ffmpeg" ));
+    engine.rootContext()->setContextProperty("appPath", appPath );
+
+   // QQmlComponent component(&engine);
+
+    qInfo() << "C++ Style Info Message" << appPath;
+	
+    engine.load(QUrl(QStringLiteral("qrc:/video.qml")));
+    return app.exec();
+} 

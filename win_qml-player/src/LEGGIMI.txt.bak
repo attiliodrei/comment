@@ -1,0 +1,17 @@
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"  x86
+cmake.exe -G "Ninja" ..
+echo cmake  -G "Ninja" ..
+ninja install
+
+buildare il pro da qt creator C:\comment\examples-master\qml-player\src.pro
+
+deployare
+
+C:\Qt\Qt5.12.0\5.12.12\msvc2017\bin>.\windeployqt.exe  --qmldir C:\Qt\Qt5.12.0\5.12.12\msvc2017\qml --qmldir C:\VLC-Qt\qml C:/comment/examples-master/qml-player/build-src-Desktop_Qt_5_12_12_MSVC2017_32bit-Release/release/src.exe
+
+
+
+alla fine copiare exeguibile su c:\qml-player
+
+C:/comment/examples-master/qml-player/build-src-Desktop_Qt_5_12_12_MSVC2017_32bit-Release/release/src.exe 

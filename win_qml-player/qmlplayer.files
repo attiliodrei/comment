@@ -1,0 +1,16 @@
+_src/cmd.h
+_src/main.cpp
+_src/new/cmd.h
+_src/new/main.cpp
+_src/new/main.h
+_src/old/main - Copy.cpp
+_src/old/main.cpp
+_src/old/process.h
+build/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.c
+build/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+build/CMakeFiles/ShowIncludes/foo.h
+build/CMakeFiles/ShowIncludes/main.c
+build/src/qml-player_autogen/EWIEGA46WW/moc_process.cpp
+build/src/qml-player_autogen/mocs_compilation.cpp
+src/main.cpp
+src/process.h

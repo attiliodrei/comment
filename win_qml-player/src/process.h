@@ -1,0 +1,16 @@
+#ifndef PROCESS_H
+#define PROCESS_H
+
+#include <QProcess>
+#include <QObject>
+class Process : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Process(QObject *parent = 0);
+    Q_INVOKABLE void start(const QString &program, const QString &arguments);
+    Q_INVOKABLE void stop();
+private:
+    QProcess *m_process;
+};
+#endif // PROCESS_H
