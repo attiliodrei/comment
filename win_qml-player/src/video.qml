@@ -143,7 +143,7 @@ Rectangle {
             autoplay: true
             volume: volumeSlider.value
             anchors.fill: parent
-            mediaOptions: [":network-caching=0", ":live-caching=0", ":rtsp-frame-buffer-size=300",":rtsp=tcp", ":rtsp-caching=50"]
+            mediaOptions: [":network-caching=0", ":live-caching=0", ":rtsp-frame-buffer-size=300",":rtsp=tcp", ":rtsp-caching=50",":clock-jitter=0",":clock-synchro=0"]
             url: "rtmp://aws-reflector.tngrm.io:1935/comment-" + textInput.text +"/live.pubproxy"
         }
 }
