@@ -18,7 +18,7 @@ ApplicationWindow {
 
 Process {
       id: myprocess
-     // onReadyRead: element.text = readAll();
+           // onReadyRead: element.text = readAll();
   }
 
 Rectangle {

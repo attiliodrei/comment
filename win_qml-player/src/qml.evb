@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="windows-1252"?>
 <>
   <InputFile>C:\Users\Administrator\Desktop\qml-player\qml-player.exe</InputFile>
-  <OutputFile>C:\Users\Administrator\Desktop\qml-player\qml-player_boxed.exe</OutputFile>
+  <OutputFile>C:\Users\Administrator\Desktop\qml-player\app-win.exe</OutputFile>
   <Files>
     <Enabled>True</Enabled>
     <DeleteExtractedOnExit>False</DeleteExtractedOnExit>
@@ -58,18 +58,6 @@
             <ActiveX>False</ActiveX>
             <ActiveXInstall>False</ActiveXInstall>
             <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>vc_redist.x86.exe</Name>
-            <File>C:\Users\Administrator\Desktop\qml-player\vc_redist.x86.exe</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>2</Action>
             <OverwriteDateTime>False</OverwriteDateTime>
             <OverwriteAttributes>False</OverwriteAttributes>
             <PassCommandLine>False</PassCommandLine>
@@ -13925,18 +13913,6 @@
           </File>
           <File>
             <Type>2</Type>
-            <Name>ffmpeg.exe</Name>
-            <File>C:\Users\Administrator\Desktop\qml-player\ffmpeg.exe</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>2</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
             <Name>libEGL.dll</Name>
             <File>C:\Users\Administrator\Desktop\qml-player\libEGL.dll</File>
             <ActiveX>False</ActiveX>
@@ -13990,18 +13966,6 @@
             <ActiveX>False</ActiveX>
             <ActiveXInstall>False</ActiveXInstall>
             <Action>0</Action>
-            <OverwriteDateTime>False</OverwriteDateTime>
-            <OverwriteAttributes>False</OverwriteAttributes>
-            <PassCommandLine>False</PassCommandLine>
-            <HideFromDialogs>0</HideFromDialogs>
-          </File>
-          <File>
-            <Type>2</Type>
-            <Name>mic.cmd</Name>
-            <File>C:\Users\Administrator\Desktop\qml-player\mic.cmd</File>
-            <ActiveX>False</ActiveX>
-            <ActiveXInstall>False</ActiveXInstall>
-            <Action>2</Action>
             <OverwriteDateTime>False</OverwriteDateTime>
             <OverwriteAttributes>False</OverwriteAttributes>
             <PassCommandLine>False</PassCommandLine>
@@ -14151,6 +14115,30 @@
             <PassCommandLine>False</PassCommandLine>
             <HideFromDialogs>0</HideFromDialogs>
           </File>
+          <File>
+            <Type>2</Type>
+            <Name>mic.cmd</Name>
+            <File>C:\Users\Administrator\Desktop\qml-player\mic.cmd</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
+          <File>
+            <Type>2</Type>
+            <Name>ffmpeg.exe</Name>
+            <File>C:\Users\Administrator\Desktop\qml-player\ffmpeg.exe</File>
+            <ActiveX>False</ActiveX>
+            <ActiveXInstall>False</ActiveXInstall>
+            <Action>0</Action>
+            <OverwriteDateTime>False</OverwriteDateTime>
+            <OverwriteAttributes>False</OverwriteAttributes>
+            <PassCommandLine>False</PassCommandLine>
+            <HideFromDialogs>0</HideFromDialogs>
+          </File>
         </Files>
       </File>
       <File>
@@ -14213,8 +14201,8 @@
     <Enabled>False</Enabled>
   </Packaging>
   <Options>
-    <ShareVirtualSystem>False</ShareVirtualSystem>
-    <MapExecutableWithTemporaryFile>False</MapExecutableWithTemporaryFile>
+    <ShareVirtualSystem>True</ShareVirtualSystem>
+    <MapExecutableWithTemporaryFile>True</MapExecutableWithTemporaryFile>
     <AllowRunningOfVirtualExeFiles>True</AllowRunningOfVirtualExeFiles>
   </Options>
   <Storage>
