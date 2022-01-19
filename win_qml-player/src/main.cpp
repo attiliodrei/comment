@@ -22,7 +22,9 @@
 HANDLE jobMainProcess = NULL;
 #include <QDebug>
 #include <QDir>
+#include <QStringListModel>
 
+QObject * s_qml_text_edit = 0;
 
 Process::Process(QObject *parent) :
      QObject(parent),
@@ -117,10 +119,10 @@ int main(int argc, char** argv)
 {
 
 
+QStringListModel model1;
 
-
-
-
+QStringList list;
+// list.append("-");
     QGuiApplication app(argc, argv);
 
          QStringList args = app.arguments();
@@ -213,37 +215,102 @@ QString line;
          std::cout<< response.toStdString();
 
        QTextStream in (&response);
+int found=0;
 
        do {
            line = in.readLine();
             std::cout<< line.toStdString();
+       } while (!line.contains(searchString, Qt::CaseInsensitive));
+const QString searchString2("]  \"");
+std::cout<< "initial audio";
+       do {
+           line = in.readLine();
 
-           if (line.contains(searchString, Qt::CaseInsensitive)) {
-                 line = in.readLine();
-                 if (line.contains('"', Qt::CaseInsensitive)) {
-                  // micp= line.section('"', 0, 0)  ;
-                     micp= line.split('"').at(1);
-                 }
-               break;
-           }
-       } while (!line.isNull());
+           std::cout<< "|" << line.toStdString()<< "|\n";
+
+
+         if (line.contains(searchString2)) {
+             QString device=line.split('"').at(1);
+             std::cout<< "trovato: " << device.toStdString()  << "\n";
+          // micp= line.section('"', 0, 0)  ;
+             if ( found==0)
+                    micp= device ;
+             found=1;
+            list.append(device);
+         }
+
+           } while (!line.isNull());
+
+
+
+model1.setStringList(list);
 
        std::cout << "\nInput Audio Device  ... |"<< micp.toStdString() << "|\n";
-
+engine.rootContext()->setContextProperty("model1", &model1);
 //  QProcess process;
 //engine.rootContext()->setContextProperty("process", mprocess );
     qInfo() << "C++ Style Info Message" << appPath;
 engine.rootContext()->setContextProperty("appPath", appPath );
 
-QString dshow = "audio=""" +  micp.trimmed() + """";
+// old
+//QString dshow = "audio=""" +  micp.trimmed() + """";
+////dshow ="anullsrc";
+////QString argproc =  "-f,lavfi,-i," + dshow +  ",-stats,-v,panic,-acodec,aac,-ab,128k,-ac,2,-f,rtsp,-rtsp_transport,tcp,rtsp://aws-reflector.tngrm.io:8654/comment-";
+//
+//QString argproc =  "-f,dshow,-i," + dshow +  ",-stats,-v,panic,-acodec,aac,-ab,128k,-ac,2,-f,rtsp,-rtsp_transport,tcp,rtsp://aws-reflector.tngrm.io:8654/comment-";
+
+// tentativo lista
+//QObject *rootObject = engine.rootObjects().first();
+//s_qml_text_edit = engine.rootObjects().first()->findChild<QObject*>("micInput");
+//QStringListModel<QObject *> list2 = = engine.rootObjects().first()->findChild<QObject*>("micInput");
+
+//o= engine.rootObjects().first()->findChild<QObject*>("micInput");
+//QStringListMod
+
+//QList<QWidget *> childWidgets = ui->frame_3->findChildren<QWidget *>();
+
+//QList<QWidget *> childWidgets = ui->frame_3->findChildren<QWidget *>();
+//QStringList data;
+
+//for(auto widget : childWidgets){
+//    auto combo = dynamic_cast<QComboBox*>(widget);
+//    if (combo) {
+//       data << combo->currentText(); // currentText() returns the text from the combobox
+//    }
+//    else {
+//        auto lineEdit = dynamic_cast<QLineEdit*>(widget);
+//        if (lineEdit) {
+//            data << lineEdit->text(); // A line edit has a text() member.
+//        }
+//    }
+//}
+
+
+
+//QObject *comboFaturacao_t = engine.rootObjects().first()->findChild<QObject*>("micInput");
+//qDebug() << comboFaturacao_t->property("currentText");
+
+//QString qv= comboFaturacao_t->property("currentText").toString();
+//QString dshow = "audio=""" + qv  + """";
+
+QString dshow = "audio=""" +  micp.trimmed()  + """";
+
+
+
 //dshow ="anullsrc";
 //QString argproc =  "-f,lavfi,-i," + dshow +  ",-stats,-v,panic,-acodec,aac,-ab,128k,-ac,2,-f,rtsp,-rtsp_transport,tcp,rtsp://aws-reflector.tngrm.io:8654/comment-";
 
 QString argproc =  "-f,dshow,-i," + dshow +  ",-stats,-v,panic,-acodec,aac,-ab,128k,-ac,2,-f,rtsp,-rtsp_transport,tcp,rtsp://aws-reflector.tngrm.io:8654/comment-";
 
-
- //QString dshow = "audio=\"" + micp.trimmed()  + "\"";
 engine.rootContext()->setContextProperty("Mic", argproc );
+
+
+
+
+
+//QString dshow = "audio=\"" + micp.trimmed()  + "\"";
+
+
  engine.load(QUrl(QStringLiteral("qrc:/video.qml")));
     return app.exec();
 } 

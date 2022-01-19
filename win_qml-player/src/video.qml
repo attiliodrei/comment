@@ -27,7 +27,7 @@ Rectangle {
     y: 553
     width: 100
     height: 100
-                    
+
     property bool isBlue: true
     color: isBlue ? "blue" : "green"
        border.color: "white"
@@ -38,7 +38,7 @@ Rectangle {
                         text: rect.isBlue ? "start" : "stop"
                         color: "blue"
                     }
-    
+
         MouseArea {
                         anchors.fill: parent
                         onClicked: {
@@ -53,25 +53,50 @@ Rectangle {
                              else {
                            //   myprocess.kill()
                    // myprocess.stop()
-                     myprocess.start( appPath, Mic + textInput.text )
-                    //mytimer.start()
+
+                                myprocess.start( appPath, "-f,dshow,-i,audio=" + "" +  box1.currentText + "" + ",-stats,-v,panic,-acodec,aac,-ab,128k,-ac,2,-f,rtsp,-rtsp_transport,tcp,rtsp://aws-reflector.tngrm.io:8654/comment-" + textInput.text )
+
+
+
+
+                                //mytimer.start()
 
                             }
 
                         }
                     }
-    } 
+    }
 
 
 
 Slider {
     id:  volumeSlider
-    x: 400
+    x: 380
     y: 553
     from: 1
     value: 20
     to: 90
 }
+
+       ComboBox {
+           id: box1
+           x: 600
+           y: 553
+           width: 250
+           height: 50
+
+           objectName: "micInput"
+           model: model1
+           textRole: "display"
+           onCurrentTextChanged: {
+               myprocess.stop()
+              // mytimer.stop()
+                rect.isBlue =  true
+
+
+           }
+
+       }
 
   Text {
         id: element
@@ -82,7 +107,7 @@ Slider {
         text: qsTr("test")
         font.pixelSize: 12
     }
-    
+
 
 
   TextInput {
@@ -98,7 +123,7 @@ Slider {
         font.weight: Font.Bold
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 19
-        onTextChanged: {   
+        onTextChanged: {
            if (textInput.text > "0" ) {
          //  myprocess.kill()
          myprocess.stop()
