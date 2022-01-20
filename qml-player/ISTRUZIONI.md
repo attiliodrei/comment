@@ -10,9 +10,14 @@ make
 make install
 mv  src/qml-player.app/Contents/MacOS/qml-player src/qml-player.app/Contents/MacOS/qml-player_
 cp  -a _qml-player src/qml-player.app/Contents/MacOS/qml-player
+install_name_tool -add_rpath @executable_path/../Frameworks src/qml-player.app/Contents/MacOS/qml-player_ 
+install_name_tool -add_rpath @loader_path/../Frameworks src/qml-player.app/Contents/MacOS/qml-player_
+
+
 cd /Users/attiliodrei/Qt5.12.0/5.12.0/clang_64/bin
                                                                      
 ./macdeployqt /Users/attiliodrei/Downloads/examples-master/qml-player/build/src/qml-player.app -qmldir=/Users/attiliodrei/Qt5.12.0/5.12.0/clang_64/qml
+
 
 install_name_tool -add_rpath @executable_path/../Frameworks qml-player_ 
 iess-iMac-8:MacOS ies$ install_name_tool -add_rpath @loader_path/../Frameworks qml-player_

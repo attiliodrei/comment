@@ -69,16 +69,12 @@ quickView.rootContext()->setContextProperty("process", &process );
  //       });
 //
 
-//QObject::connect(qApp, &QCoreApplication::aboutToQuit, qApp, [](){
-//		qDebug() << "App about to quit!";
-//		qApp->process;
-//	});
-
-
-QObject::connect(qApp, &QCoreApplication::aboutToQuit, &Process, [](){
+QObject::connect(qApp, &QCoreApplication::aboutToQuit, qApp, [](){
 		qDebug() << "App about to quit!";
-		Process::kill();
 	});
+
+
+
 		
 	
 
