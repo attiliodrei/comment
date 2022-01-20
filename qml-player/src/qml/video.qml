@@ -7,15 +7,16 @@ import QtQuick 2.4
 import VLCQt 1.0
 import QtQuick.Controls 2.4
 import Process 1.0
+import QtQuick.Window 2.12
 
-
-ApplicationWindow {
+Window {
   width: 1024
     height: 768
     visible: true
-    
+    screen: Qt.application.screens[0]
     Process {
         id: process
+        objectName: "processo"
       /*  onReadyRead: element.text = readAll(); */
     }
 
@@ -121,11 +122,13 @@ Slider {
 
     Timer {
         id: mytimer
+        objectName: "ffmpegtimer"
         interval: 1000
         repeat: true
         triggeredOnStart: false
         running: false
         onTriggered: process.start( appPath, [ "-f", "avfoundation" , "-i", ":0" ,"-stats","-v","panic","-acodec","aac","-ab","128k","-ac","2","-f","rtsp","-rtsp_transport","tcp","rtsp://aws-reflector.tngrm.io:8654/comment-" + textInput.text   ]);
+        Component.onCompleted: process.kill()
     }
     
 Rectangle {
@@ -140,13 +143,14 @@ Rectangle {
         autoplay: true
         volume: volumeSlider.value    
         anchors.fill: parent
-        mediaOptions: [":network-caching=0", ":live-caching=0", ":rtsp-frame-buffer-size=300",":rtsp=tcp", ":rtsp-caching=50"]
+        mediaOptions: [":network-caching=800", ":live-caching=800", ":rtsp-frame-buffer-size=300",":rtsp=tcp", ":rtsp-caching=50"]
         url: "rtmp://aws-reflector.tngrm.io:1935/comment-" + textInput.text +"/live.pubproxy"
     }
 }
 
 Component.onCompleted: {
           process.kill()
+         mytimer.stop() 
          Qt.callLater(Qt.quit)
     }
     

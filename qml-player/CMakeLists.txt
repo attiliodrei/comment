@@ -54,6 +54,10 @@ FIND_PACKAGE(Qt5 5.2.0 REQUIRED COMPONENTS Quick)
 # Add additional libraries
 FIND_PACKAGE(VLCQt REQUIRED COMPONENTS Qml)
 
+find_package(Qt5Core)
+
+
+
 # Set Qt bin dir to find QtCore*.dll and other libs to install
 STRING(REGEX REPLACE "([^ ]+)[/\\].*" "\\1" QT_BIN_DIR_TMP "${QT_MOC_EXECUTABLE}")
 STRING(REGEX REPLACE "\\\\" "/" QT_BIN_DIR "${QT_BIN_DIR_TMP}")  # Replace back slashes to slashes

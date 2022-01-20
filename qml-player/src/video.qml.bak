@@ -1,0 +1,22 @@
+ApplicationWindow {
+    width: 800
+    height: 480
+    visible: true
+
+    Text {
+        id: text
+    }
+
+    Process {
+        id: process
+        onReadyRead: text.text = readAll();
+    }
+
+    Timer {
+        interval: 1000
+        repeat: true
+        triggeredOnStart: true
+        running: true
+        onTriggered: process.start("/bin/cat", [ "/proc/uptime" ]);
+    }
+}
