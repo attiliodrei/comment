@@ -14,6 +14,8 @@ cd /Users/attiliodrei/Qt5.12.0/5.12.0/clang_64/bin
                                                                      
 ./macdeployqt /Users/attiliodrei/Downloads/examples-master/qml-player/build/src/qml-player.app -qmldir=/Users/attiliodrei/Qt5.12.0/5.12.0/clang_64/qml
 
+install_name_tool -add_rpath @executable_path/../Frameworks qml-player_ 
+iess-iMac-8:MacOS ies$ install_name_tool -add_rpath @loader_path/../Frameworks qml-player_
 
 
  
